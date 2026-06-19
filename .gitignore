@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+.coverage
+
+# OS
+.DS_Store
+
+# PlatformIO (firmware build artifacts)
+.pio/
+
+# Runtime / per-car artifacts — never commit (car-specific secrets & logs)
+*.log
+# the one exception: a sanitized, fake-PIN illustration that DOES ship
+!example-run.log
+*.pin
+*.txt
+captures/
+checkpoint.json
