@@ -1,0 +1,32 @@
+# example-run.log — a SANITIZED illustration of a crack run's log output.
+# The PIN and gift bytes below are fake placeholders; shuffle orders are public (from vtl).
+# This is documentation only — real runs write a gitignored *.log on disk.
+
+0.0	>> S 500000
+0.0	<< S ok
+0.0	=== CEM PIN crack started ===
+0.0	gifts supplied: pin[0]=0x11, pin[1]=0x22
+0.0	shuffle order fixed to (3, 1, 5, 0, 2, 4) (passed explicitly)
+0.0	>> PROGON
+0.0	<< PROGON ok
+1.5	programming mode ON — bus quiet, CEM responsive
+38.1	gift pos 0 = 0x11: confirm p_hi=0.561 (lower-CI +0.529) vs rival median 0.466 -> CONFIRMED
+38.1	gift pos 0 = 0x11 (confirmed) — removes a 100x factor from the sweep
+38.1	gift pos 1 = 0x22 (seeded)   — removes a 100x factor from the sweep
+38.1	pos 2: UNMEASURABLE — carrying full 100-value axis to the sweep
+38.1	pos 3: UNMEASURABLE — carrying full 100-value axis to the sweep
+38.1	pos 4: UNMEASURABLE — carrying full 100-value axis to the sweep
+38.1	pos 5: UNMEASURABLE — carrying full 100-value axis to the sweep
+38.1	--- SWEEP ESTIMATE --- timing/gifts resolved 2/6 bytes; brute positions [2, 3, 4, 5];
+38.1	    finish searches 100,000,000 combos at ~654us each ≈ 18.2 h
+38.1	final sweep: 4 unmeasurable position(s) -> sweeping 100,000,000 real unlocks on the Teensy
+38.1	lockout pre-flight: firing 5000 deliberately-wrong unlocks to check whether this CEM throttles
+41.4	lockout pre-flight OK — CEM answered 5000/5000; safe to sweep
+41.4	sweep progress 0 / 100,000,000 (0.00%)
+1350.0	sweep progress 2,000,000 / 100,000,000 (2.00%)
+...	(hours of sweep progress elided)
+9876.0	sweep progress 12,345,600 / 100,000,000 (12.35%)
+9881.0	=== PIN RECOVERED: 11 22 33 44 55 66 ===
+9881.0	>> PROGOFF
+9881.0	<< PROGOFF done
+9882.0	programming mode OFF (FF C8) — car returned to normal
