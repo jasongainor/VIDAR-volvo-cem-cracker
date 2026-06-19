@@ -12,6 +12,8 @@ byte a hair slower. Measure that timing on a microcontroller (a PC's USB jitter 
 the `100⁶` space collapses to a handful of `100`-way searches plus a final brute sweep of whatever the
 timing can't resolve. This tool does the measuring and the searching, and drives it all from a browser.
 
+![The VIDAR operator console — gated setup wizard on the left, live serial log + parsed per-byte progress on the right](docs/img/01-overview.png)
+
 ## 0. What you need
 
 - A **Teensy 4.0** + **2× CAN transceivers**, wired to the standard `vtl/volvo-cem-cracker` pinout
@@ -88,7 +90,11 @@ resolved it) or **unmeasurable** (carried in full to the sweep), then prints a *
 If the estimate is too long, **Stop** and get another known byte. Otherwise let it run — a hit is a real
 CEM unlock (`50 B9 00`), and the recovered PIN stays shown in the tiles on **DONE**.
 
+![A run: the raw serial log streams on the right, key events surface above it, and the parsed table tracks each byte (gift / measured / unmeasurable / recovered)](docs/img/04-running-log.png)
+
 ## 6. Verify a PIN (Check PIN)
+
+![Check-PIN mode — entering all six bytes turns the primary button green and relabels it “Check PIN”](docs/img/02-check-pin.png)
 
 Once you have a candidate PIN, type **all six** bytes into the tiles. The button turns **green** and
 becomes **Check PIN**: it fires one unlock attempt **plus a deliberately-wrong negative control** and
@@ -96,6 +102,8 @@ tells you whether that exact PIN unlocks this CEM — no crack, just a ~5-second
 is a positive unlock *and* a rejected wrong-PIN control.
 
 ## 7. If a long run gets interrupted
+
+![Resume — enter the same gifts and the prior run's runtime, and it previews where to restart the sweep](docs/img/03-resume.png)
 
 Power blip, USB drop, laptop sleep? Open **"Resume an interrupted run"**, enter the same gifts + shuffle
 + speed as the dead run, and give either its **runtime** (the tool estimates how far it got, rewound a

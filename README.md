@@ -9,6 +9,8 @@ instead of raw serial logs. See [License and credits](#license-and-credits).
 
 > **Use only on a vehicle you own or are authorized to service.**
 
+![The VIDAR operator console](docs/img/01-overview.png)
+
 ## Contents
 
 - [Quick start](#quick-start)

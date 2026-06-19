@@ -715,6 +715,7 @@ PAGE = r"""<!doctype html>
   /* Check-PIN mode: the primary button turns green when all 6 bytes are entered (verify, not crack) */
   button.go.checkpin{background:linear-gradient(#2f9e57,#268a4b);border-color:#1f7a3f}
   button.go.checkpin:not(:disabled):hover{background:linear-gradient(#34ab5f,#288f4e)}
+  button.go.checkpin:disabled{background:#cdd6df;border-color:#bcc6cf}  /* disabled Check-PIN reads as disabled, not green */
   .err.good{color:var(--ok)} .err.warn{color:var(--warn)} .err.bad{color:var(--bad)}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
