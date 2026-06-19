@@ -1,8 +1,8 @@
 # Tutorial — recovering a CEM PIN, start to finish
 
 A hands-on walkthrough: from a bare Teensy to a recovered (and verified) PIN. For the theory behind
-each step, see [HOW-IT-WORKS.md](HOW-IT-WORKS.md). **Only do this on a car you own or are authorized to
-service.**
+each step, see [HOW-IT-WORKS.md](HOW-IT-WORKS.md). **Your car, your call** — no warranty, and if you
+brick something that's on you (Xemodex will gladly fix it for a fee).
 
 ## The idea in one paragraph
 

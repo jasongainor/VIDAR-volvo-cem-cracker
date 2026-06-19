@@ -7,7 +7,10 @@ car. It is a from-scratch reimplementation **derived from**
 it and built on its reverse-engineering — re-engineered to land reliably and to be driven from a browser
 instead of raw serial logs. See [License and credits](#license-and-credits).
 
-> **Use only on a vehicle you own or are authorized to service.**
+> **No warranty, no hand-holding.** This pokes a live car computer over CAN — get it wrong and you can
+> strand the car in programming mode or brick a module. Run it and you own the outcome; I'm not
+> responsible for anything that goes sideways. (If it does, [Xemodex](https://www.xemodex.com) will
+> gladly take your money to fix it.) Your car, your call.
 
 ![The VIDAR operator console](docs/img/01-overview.png)
 
